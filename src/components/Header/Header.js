@@ -3,7 +3,7 @@ export default function Header(props) {
     return (
         <nav className='navbar navbar-expand-lg navbar-dark bg-dark'>
             <a className='navbar-brand' href='#'>
-                React CRUD
+                AMAZONCLONE
             </a>
             <button
                 className='navbar-toggler'

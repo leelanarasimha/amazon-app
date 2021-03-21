@@ -1,0 +1,21 @@
+
+.navbar-brand:hover{
+    color:#000;
+}
+.navbar  {
+    background-color: darkslateblue;
+}
+.navbar-brand{
+    font-size: xx-large;
+    color: ghostwhite;
+}
+.nav-component{
+    color:white;
+}
+.nav-component:hover{
+    color:#000;
+}
+.cart{
+    margin-left: 45rem;
+}
+

@@ -1,24 +1,31 @@
 import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import Header from './components/Header/Header';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Login from './pages/Login/Login';
+import Registration from './pages/Registration/Registration';
+import Products from './pages/Products/Products';
+import Contact from './pages/Contact/Contact';
+import Cart from './pages/Cart/Cart';
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <div className='container'>
+        <Switch>
+        <Route path='/' render={ ()=> <div><h2>Welcome To Amazon</h2></div>} exact/>
+      <Route path='/login' component={Login}/>
+      <Route path='/registration' component={Registration}/>
+      <Route path='/products' component={Products}/>
+      <Route path='/contact' component={Contact}/>
+      <Route path='/cart' component={Cart}/>
+      </Switch>
+      </div>
     </div>
+    </BrowserRouter>
   );
 }
 
